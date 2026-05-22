@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pushpsaar Perfumes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#fff4f7;
+color:#442c35;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#ffe4ec;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+font-size:2rem;
+font-family:'Cormorant Garamond',serif;
+font-weight:700;
+color:#cc4f87;
+letter-spacing:2px;
+}
+
+.nav-btn{
+background:#ff5f9e;
+padding:12px 24px;
+border-radius:40px;
+color:white;
+font-weight:600;
+border:none;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:100px 8%;
+background:
+linear-gradient(rgba(255,240,245,.6),rgba(255,240,245,.7)),
+url('ChatGPT Image May 22, 2026, 07_59_54 PM.png');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:5rem;
+font-family:'Cormorant Garamond',serif;
+color:#c43b79;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+font-size:1.1rem;
+color:#694a57;
+}
+
+.hero-btn{
+margin-top:35px;
+display:inline-block;
+padding:16px 40px;
+background:#ff5f9e;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+background:#ff3f8b;
+}
+
+/* SECTION */
+
+.section{
+padding:90px 8%;
+}
+
+.title{
+font-size:3rem;
+font-family:'Cormorant Garamond',serif;
+text-align:center;
+color:#c43b79;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:60px;
+color:#74505c;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(255,92,150,.12);
+transition:.35s;
+border:2px solid #ffe1ea;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.card-content{
+padding:22px;
+}
+
+.card-content h3{
+font-size:2rem;
+font-family:'Cormorant Garamond',serif;
+margin-bottom:8px;
+color:#c43b79;
+}
+
+.price{
+font-size:1.1rem;
+font-weight:600;
+margin-bottom:15px;
+color:#ff5f9e;
+}
+
+.card-content p{
+line-height:1.7;
+font-size:.95rem;
+margin-bottom:18px;
+color:#6a515b;
+}
+
+.sale{
+display:inline-block;
+padding:8px 16px;
+background:#ffd7e6;
+color:#c43b79;
+border-radius:30px;
+font-size:.8rem;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.add-btn{
+width:100%;
+padding:14px;
+border:none;
+background:#ff5f9e;
+color:white;
+border-radius:15px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.add-btn:hover{
+background:#ff3f8b;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+}
+
+.about-text h2{
+font-size:3rem;
+font-family:'Cormorant Garamond',serif;
+color:#c43b79;
+margin-bottom:20px;
+}
+
+.about-text p{
+line-height:1.9;
+color:#6a515b;
+margin-bottom:20px;
+}
+
+/* CART */
+
+.cart{
+position:fixed;
+right:0;
+top:0;
+width:360px;
+height:100vh;
+background:white;
+padding:30px;
+overflow-y:auto;
+box-shadow:-10px 0 30px rgba(0,0,0,.1);
+z-index:1000;
+transform:translateX(100%);
+transition:.4s;
+}
+
+.cart.active{
+transform:translateX(0);
+}
+
+.cart h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:20px;
+color:#c43b79;
+}
+
+.cart-item{
+padding:15px;
+background:#fff3f7;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.cart-item h4{
+margin-bottom:5px;
+color:#c43b79;
+}
+
+.total{
+margin-top:25px;
+font-size:1.2rem;
+font-weight:700;
+color:#c43b79;
+}
+
+.order-btn{
+width:100%;
+margin-top:20px;
+padding:16px;
+border:none;
+background:#25D366;
+color:white;
+font-size:16px;
+font-weight:700;
+border-radius:15px;
+cursor:pointer;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:20px;
+font-size:22px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+background:#ffdbe8;
+color:#8b6170;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.hero-content h1{
+font-size:3rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.cart{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">Pushpsaar</div>
+
+<button class="nav-btn" onclick="openCart()">
+🛒 Cart
+</button>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Luxury Feminine Fragrances</h1>
+
+<p>
+Elegant perfumes and authentic Kannauj attars crafted for women who love softness, beauty, luxury and timeless feminine energy.
+</p>
+
+<a href="#shop" class="hero-btn">
+Shop Collection
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+
+<div class="about">
+
+<img src="cf98b081-89bc-404e-a5fb-d6125d8924df.jpg">
+
+<div class="about-text">
+
+<h2>The Legacy Of Kannauj</h2>
+
+<p>
+Pushpsaar Perfumes brings traditional Indian attar craftsmanship into modern feminine luxury.
+</p>
+
+<p>
+Every fragrance is handcrafted using traditional Deg Bhapka distillation methods inspired by roses, flowers, sandalwood and nature.
+</p>
+
+<p>
+Oil-based • Long-lasting • Alcohol-free • Elegant • Feminine
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="shop">
+
+<h2 class="title">Women’s Perfume Collection</h2>
+
+<p class="subtitle">
+Soft florals, luxurious designer-inspired perfumes and authentic attars crafted specially for women.
+</p>
+
+<div class="products">
+
+<!-- PRODUCT -->
+
+<div class="card">
+<img src="29f4976c-f2f0-4c99-ac6d-2ca0cf2f1df7.png">
+<div class="card-content">
+<h3>Miss Dior Cherry</h3>
+<div class="price">₹1499</div>
+<p>Sweet feminine luxury fragrance with soft cherry floral elegance.</p>
+<div class="sale">SALE 25% OFF</div>
+<button class="add-btn" onclick="addToCart('Miss Dior Cherry',1499)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="31b1bca0-495b-46ef-be5d-9800c48ab5ef.png">
+<div class="card-content">
+<h3>Chanel No.5</h3>
+<div class="price">₹1599</div>
+<p>Classic feminine luxury perfume inspired by timeless beauty.</p>
+<div class="sale">BEST SELLER</div>
+<button class="add-btn" onclick="addToCart('Chanel No.5',1599)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="edeaa0d1-e679-4e51-ba1a-a443374455b9.png">
+<div class="card-content">
+<h3>Gucci Flora</h3>
+<div class="price">₹1699</div>
+<p>Elegant floral luxury fragrance for soft glamorous femininity.</p>
+<div class="sale">TRENDING</div>
+<button class="add-btn" onclick="addToCart('Gucci Flora',1699)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="f7ea7277-8ad5-429d-a2a3-19cecfbd4fae.jpg">
+<div class="card-content">
+<h3>Lotus Attar</h3>
+<div class="price">₹799</div>
+<p>Fresh lotus-inspired attar with clean aquatic floral softness.</p>
+<div class="sale">NEW</div>
+<button class="add-btn" onclick="addToCart('Lotus Attar',799)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="d8b534fc-c46a-444b-aec1-11949fa043fa.jpg">
+<div class="card-content">
+<h3>Musk Attar</h3>
+<div class="price">₹899</div>
+<p>Warm feminine musk fragrance with deep luxurious richness.</p>
+<div class="sale">PREMIUM</div>
+<button class="add-btn" onclick="addToCart('Musk Attar',899)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="2b0b1442-0d5d-4716-8f85-14a47eb2e480.jpg">
+<div class="card-content">
+<h3>Shamama</h3>
+<div class="price">₹999</div>
+<p>Oriental feminine attar layered with rich floral warmth.</p>
+<div class="sale">LIMITED</div>
+<button class="add-btn" onclick="addToCart('Shamama',999)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="0ca5ddf8-1d61-421b-a0ad-26d4996b3cca.jpg">
+<div class="card-content">
+<h3>Rose Attar</h3>
+<div class="price">₹849</div>
+<p>Authentic Kannauj rose fragrance crafted for romantic elegance.</p>
+<div class="sale">POPULAR</div>
+<button class="add-btn" onclick="addToCart('Rose Attar',849)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="1e5bdc06-324e-4537-b26b-8029377f6548.jpg">
+<div class="card-content">
+<h3>Sandal Wood</h3>
+<div class="price">₹899</div>
+<p>Soft creamy sandalwood with smooth feminine luxury vibes.</p>
+<div class="sale">LUXURY</div>
+<button class="add-btn" onclick="addToCart('Sandal Wood',899)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="2a90aa62-de83-46d5-a132-e9cf02c7dbb1.jpg">
+<div class="card-content">
+<h3>Mitti Attar</h3>
+<div class="price">₹749</div>
+<p>Earth after rain transformed into elegant Indian attar.</p>
+<div class="sale">SIGNATURE</div>
+<button class="add-btn" onclick="addToCart('Mitti Attar',749)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="e2f70773-ef77-46eb-88c0-4d93edf85481.jpg ">
+<div class="card-content">
+<h3>Mogra Attar</h3>
+<div class="price">₹799</div>
+<p>Soft white floral fragrance inspired by fresh mogra flowers.</p>
+<div class="sale">FEMININE PICK</div>
+<button class="add-btn" onclick="addToCart('Mogra Attar',799)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cd0d4586-cd67-4947-9a13-c436317849d4.jpg">
+<div class="card-content">
+<h3>Khus Attar</h3>
+<div class="price">₹699</div>
+<p>Cooling earthy fragrance with clean luxurious freshness.</p>
+<div class="sale">SUMMER FAVORITE</div>
+<button class="add-btn" onclick="addToCart('Khus Attar',699)">
+Add To Cart
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="1ecd03cb-e84e-47a5-9bf4-0f053a555deb.jpg">
+<div class="card-content">
+<h3>Rose Water</h3>
+<div class="price">₹399</div>
+<p>Natural Kannauj rose water facial mist and skin refresher.</p>
+<div class="sale">SKINCARE</div>
+<button class="add-btn" onclick="addToCart('Rose Water',399)">
+Add To Cart
+</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<div class="cart" id="cart">
+
+<div class="close-btn" onclick="closeCart()">✕</div>
+
+<h2>Your Cart</h2>
+
+<div id="cartItems"></div>
+
+<div class="total" id="total">
+Total: ₹0
+</div>
+
+<button class="order-btn" onclick="checkoutWhatsApp()">
+Order On WhatsApp
+</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Pushpsaar Perfumes • Luxury Feminine Fragrances
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+let cart = [];
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+renderCart();
+
+openCart();
+
+}
+
+function renderCart(){
+
+let cartItems = document.getElementById("cartItems");
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+cartItems.innerHTML += `
+<div class="cart-item">
+<h4>${item.name}</h4>
+<p>₹${item.price}</p>
+</div>
+`;
+
+});
+
+document.getElementById("total").innerHTML =
+`Total: ₹${total}`;
+
+}
+
+function openCart(){
+
+document.getElementById("cart")
+.classList.add("active");
+
+}
+
+function closeCart(){
+
+document.getElementById("cart")
+.classList.remove("active");
+
+}
+
+function checkoutWhatsApp(){
+
+if(cart.length === 0){
+
+alert("Your cart is empty!");
+return;
+
+}
+
+let message =
+"Hello Pushpsaar Perfumes!%0A%0AI want to order:%0A";
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+message +=
+`${index+1}. ${item.name} - ₹${item.price}%0A`;
+
+total += item.price;
+
+});
+
+message += `%0A Total: ₹${total}`;
+message += `%0A%0APlease confirm my order 💕`;
+
+window.open(
+`https://wa.me/916386235558?text=${message}`,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
