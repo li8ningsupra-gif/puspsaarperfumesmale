@@ -3,973 +3,615 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pushpsaar Perfumes</title>
+<title>Pushpsaar Perfumes | Authentic Kannauj Attars</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+:root{
+--mitti:#8b5e3c;
+--mitti-dark:#5d3a21;
+--sand:#e8d5b7;
+--cream:#f9f4ee;
+--gold:#c99b5f;
+--white:#ffffff;
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
-color:white;
+font-family:'Poppins',sans-serif;
+background:var(--cream);
+color:var(--mitti-dark);
 overflow-x:hidden;
 }
 
-/* ================= HERO ================= */
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:transparent;
+backdrop-filter:none;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:none;
+border:none;
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+color:var(--mitti);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:var(--mitti-dark);
+font-weight:500;
+background:rgba(255,255,255,0.65);
+padding:10px 14px;
+border-radius:14px;
+backdrop-filter:blur(8px);
+transition:background .25s ease;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.85);
+}
 
 .hero{
-
 height:100vh;
-
 background:
-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-url("ChatGPT Image May 22, 2026, 08_20_51 PM.png");
-
+linear-gradient(rgba(40,20,10,.55),rgba(40,20,10,.55)),
+url("cc83dc57-91c6-4e45-9deb-391d757f7f6e.png");
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
-
 display:flex;
+justify-content:center;
 align-items:center;
-padding-left:8%;
-
+text-align:center;
+padding:20px;
+color:white;
 }
 
-.hero-content{
+.hero-content h1{
+font-size:5rem;
+letter-spacing:2px;
+}
 
+.hero-content p{
+font-size:1.2rem;
 max-width:700px;
-
-}
-
-.hero h1{
-
-font-size:90px;
-letter-spacing:8px;
-color:#d4af37;
-margin-bottom:10px;
-
-}
-
-.hero h2{
-
-font-size:28px;
-letter-spacing:12px;
-font-weight:300;
-margin-bottom:25px;
-
-}
-
-.hero p{
-
-font-size:18px;
-line-height:1.9;
-color:#ddd;
-margin-bottom:35px;
-max-width:600px;
-
+margin:20px auto;
 }
 
 .hero-btn{
-
-padding:16px 40px;
-background:#d4af37;
+padding:15px 35px;
+background:var(--gold);
+color:white;
 border:none;
 border-radius:50px;
-font-size:18px;
-font-weight:700;
 cursor:pointer;
-transition:0.4s;
-
+font-size:1rem;
 }
 
-.hero-btn:hover{
-
-background:white;
-transform:translateY(-5px);
-
+.section{
+padding:90px 8%;
 }
 
-/* ================= FEATURES ================= */
-
-.features{
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-padding:60px 20px;
-background:#0d0d0d;
-
-}
-
-.feature-box{
-
-background:#111;
-padding:30px;
-width:300px;
-border-radius:20px;
+.title{
 text-align:center;
-border:1px solid #222;
-
+font-size:3rem;
+margin-bottom:20px;
 }
 
-.feature-box h3{
-
-font-size:32px;
-color:#d4af37;
-margin-bottom:10px;
-
-}
-
-.feature-box p{
-
-color:#bbb;
-line-height:1.7;
-
-}
-
-/* ================= PRODUCTS ================= */
-
-.section-title{
-
+.subtitle{
 text-align:center;
-font-size:52px;
-margin-top:90px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
 margin-bottom:50px;
-color:#d4af37;
-
 }
 
 .products{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-padding:40px;
-
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-
-background:#111;
-border-radius:25px;
+background:white;
+border-radius:20px;
 overflow:hidden;
-border:1px solid #222;
-transition:0.4s;
-
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
-
-transform:translateY(-10px);
-
+transform:translateY(-8px);
 }
 
 .card img{
-
 width:100%;
-height:430px;
+height:300px;
 object-fit:cover;
-
 }
 
 .card-content{
-
-padding:25px;
-
+padding:20px;
+text-align:center;
+display:flex;
+flex:1;
+flex-direction:column;
 }
 
-.card-content h3{
-
-font-size:32px;
-color:#d4af37;
-margin-bottom:10px;
-
+.card h3{
+font-size:2rem;
 }
 
-.card-content p{
-
-line-height:1.8;
-color:#bbb;
-margin-bottom:20px;
-
+.product-note{
+font-size:.9rem;
+line-height:1.6;
+margin:8px 0 16px;
+color:#6f5139;
+min-height:46px;
 }
 
-.sale{
+.size-options{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin:0 0 14px;
+}
 
-display:inline-block;
-background:red;
-padding:6px 15px;
-border-radius:30px;
-font-size:14px;
-font-weight:bold;
-margin-bottom:15px;
+.size-options label{
+border:1px solid #e2c9a9;
+border-radius:12px;
+padding:10px;
+cursor:pointer;
+background:#fffaf3;
+transition:.25s;
+}
 
+.size-options input{
+display:none;
+}
+
+.size-options span{
+display:block;
+font-weight:600;
+font-size:.95rem;
+}
+
+.size-options strong{
+display:block;
+margin-top:4px;
+color:var(--mitti);
+}
+
+.size-options label:has(input:checked){
+background:var(--mitti);
+border-color:var(--mitti);
+color:white;
+}
+
+.size-options label:has(input:checked) strong{
+color:white;
 }
 
 .price{
-
-line-height:2;
-margin-bottom:20px;
-
-}
-
-.old-price{
-
-text-decoration:line-through;
-color:#777;
-margin-right:10px;
-
-}
-
-.new-price{
-
-color:#d4af37;
-font-weight:bold;
-
-}
-
-select{
-
-width:100%;
-padding:14px;
-background:#1a1a1a;
-border:none;
-border-radius:12px;
-color:white;
-margin-bottom:15px;
-
+font-size:1.2rem;
+font-weight:600;
+margin:0 0 14px;
+color:var(--mitti);
 }
 
 .add-btn{
-
 width:100%;
-padding:15px;
-background:#d4af37;
+padding:12px;
+background:var(--mitti);
 border:none;
-font-size:16px;
-font-weight:700;
-border-radius:12px;
+color:white;
+border-radius:10px;
 cursor:pointer;
-
+margin-top:auto;
 }
 
-.add-btn:hover{
-
-background:white;
-
+.legacy{
+background:#efe1ca;
 }
 
-/* ================= ABOUT ================= */
-
-.about{
-
-padding:90px 10%;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:50px;
-
-}
-
-.about img{
-
-width:500px;
-max-width:100%;
+.process img,
+.legacy img{
+width:100%;
 border-radius:20px;
-
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-.about-text{
-
-flex:1;
-
+footer{
+background:var(--mitti-dark);
+color:white;
+padding:40px;
+text-align:center;
 }
 
-.about-text h2{
-
-font-size:50px;
-color:#d4af37;
-margin-bottom:20px;
-
-}
-
-.about-text p{
-
-line-height:2;
-font-size:17px;
-color:#ccc;
-
-}
-
-/* ================= REVIEWS ================= */
-
-.review-section{
-
-padding:80px 40px;
-
-}
-
-.reviews{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-
-}
-
-.review{
-
-background:#111;
-padding:30px;
-border-radius:20px;
-border:1px solid #222;
-
-}
-
-.review h4{
-
-color:#d4af37;
-margin-bottom:15px;
-
-}
-
-.review p{
-
-color:#ccc;
-line-height:1.8;
-
-}
-
-/* ================= CART ================= */
-
-.cart{
-
+.cart-toggle{
 position:fixed;
-right:20px;
-bottom:20px;
-background:#111;
-padding:25px;
-width:330px;
-border-radius:20px;
-border:1px solid #333;
+bottom:25px;
+right:25px;
+background:var(--mitti);
+color:white;
+border:none;
+padding:16px 22px;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
 z-index:999;
-max-height:500px;
-overflow:auto;
-
+box-shadow:0 10px 20px rgba(0,0,0,.25);
 }
 
-.cart h2{
+.cart-sidebar{
+position:fixed;
+top:0;
+right:-400px;
+width:360px;
+height:100%;
+background:white;
+box-shadow:-5px 0 25px rgba(0,0,0,.15);
+transition:.4s;
+z-index:1001;
+display:flex;
+flex-direction:column;
+}
 
-color:#d4af37;
-margin-bottom:20px;
+.cart-sidebar.active{
+right:0;
+}
 
+.cart-header{
+background:var(--mitti);
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.close-cart{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+.cart-items{
+flex:1;
+overflow-y:auto;
+padding:20px;
 }
 
 .cart-item{
-
-padding:10px 0;
-border-bottom:1px solid #222;
-
+padding:12px 0;
+border-bottom:1px solid #ddd;
 }
 
-.order-btn{
+.cart-item small{
+display:block;
+margin-top:3px;
+color:#7b6048;
+}
 
-margin-top:20px;
+.qty-btn{
+padding:5px 10px;
+margin-top:10px;
+border:none;
+background:var(--mitti);
+color:white;
+cursor:pointer;
+border-radius:6px;
+}
+
+.cart-footer{
+padding:20px;
+border-top:1px solid #ddd;
+}
+
+.buy-btn{
 width:100%;
 padding:15px;
 background:#25D366;
-color:white;
 border:none;
-font-size:17px;
-font-weight:700;
-border-radius:12px;
+color:white;
+font-size:1rem;
 cursor:pointer;
-
+border-radius:10px;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-
-background:#0b0b0b;
-padding:60px 20px;
-text-align:center;
-margin-top:80px;
-
-}
-
-footer h2{
-
-font-size:45px;
-color:#d4af37;
+.total{
+font-size:1.3rem;
+font-weight:600;
 margin-bottom:15px;
-
 }
-
-footer p{
-
-line-height:2;
-color:#bbb;
-
-}
-
-.instagram{
-
-margin-top:25px;
-font-size:40px;
-
-}
-
-.instagram a{
-
-text-decoration:none;
-color:#d4af37;
-
-}
-
-/* ================= MOBILE ================= */
 
 @media(max-width:768px){
-
-.hero{
-
-padding:30px;
-
+.hero-content h1{
+font-size:3rem;
 }
 
-.hero h1{
-
-font-size:55px;
-
+nav ul{
+display:none;
 }
 
-.hero h2{
-
-font-size:18px;
-letter-spacing:5px;
-
+.cart-sidebar{
+width:100%;
 }
-
-.hero p{
-
-font-size:16px;
-
 }
-
-.section-title{
-
-font-size:38px;
-
-}
-
-.cart{
-
-width:90%;
-right:5%;
-
-}
-
-}
-
 </style>
 </head>
 
 <body>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#legacy">Legacy</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#products">Products</a></li>
+</ul>
+</nav>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
+<section class="hero" id="home">
 <div class="hero-content">
-
-<h1>PUSHPSAAR</h1>
-
-<h2>PERFUMES</h2>
-
-<p>
-Luxury Kannauj inspired fragrances crafted for confidence, attraction and long lasting premium performance.
-</p>
-
-<button class="hero-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
-Explore Collection
-</button>
-
+<h1>Pushpsaar Perfumes</h1>
+<p>Authentic Kannauj Attars handcrafted using the traditional Deg Bhapka distillation process.</p>
+<a href="#products"><button class="hero-btn">Explore Collection</button></a>
 </div>
-
 </section>
 
-<!-- ================= FEATURES ================= -->
-
-<section class="features">
-
-<div class="feature-box">
-<h3>50K+</h3>
-<p>Happy Customers Delivered Across India</p>
-</div>
-
-<div class="feature-box">
-<h3>Free Delivery</h3>
-<p>Fast Shipping All Over India</p>
-</div>
-
-<div class="feature-box">
-<h3>Kannauj Heritage</h3>
-<p>Inspired By India's Traditional Perfume Capital</p>
-</div>
-
+<section class="section legacy" id="legacy">
+<h2 class="title">The Legacy of Kannauj</h2>
+<p class="subtitle">
+Kannauj is known as the perfume capital of India. At Pushpsaar Perfumes,
+we preserve centuries-old fragrance traditions through authentic attars,
+natural ingredients, and traditional craftsmanship.
+</p>
+<img src="cf98b081-89bc-404e-a5fb-d6125d8924df.jpg" alt="Kannauj perfume craft">
 </section>
 
-<!-- ================= PRODUCTS ================= -->
-
-<h2 class="section-title">Luxury Collection</h2>
-
-<section class="products" id="products">
-
-<!-- BLEU -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_11_00 PM - Copy - Copy - Copy.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>Bleu De Chanel</h3>
-
-<p>Fresh premium masculine fragrance with luxurious projection.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size1">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('Bleu De Chanel', document.getElementById('size1').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
-<!-- DIOR -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_11_11 PM - Copy - Copy.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>Dior Sauvage</h3>
-
-<p>Bold luxurious fragrance designed for confidence and attraction.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size2">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('Dior Sauvage', document.getElementById('size2').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
-<!-- ARMANI -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_11_56 PM.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>Armani Code</h3>
-
-<p>Elegant premium fragrance with luxurious dark masculine notes.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size3">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('Armani Code', document.getElementById('size3').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
-<!-- CREED -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_12_28 PM.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>Creed Aventus</h3>
-
-<p>Luxury statement fragrance inspired by success and power.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size4">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('Creed Aventus', document.getElementById('size4').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
-<!-- SRK -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_11_43 PM (1) - Copy.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>SRK Combo</h3>
-
-<p>Rich luxurious blend inspired by king-size charisma.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size5">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('SRK Combo', document.getElementById('size5').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
-<!-- CR7 -->
-
-<div class="card">
-
-<img src="ChatGPT Image May 22, 2026, 08_11_55 PM.png">
-
-<div class="card-content">
-
-<div class="sale">SALE 🔥</div>
-
-<h3>CR7</h3>
-
-<p>Fresh sporty masculine fragrance made for winners.</p>
-
-<div class="price">
-
-<div>
-<span class="old-price">₹699</span>
-<span class="new-price">30ML - ₹349</span>
-</div>
-
-<div>
-<span class="old-price">₹1299</span>
-<span class="new-price">50ML - ₹649</span>
-</div>
-
-<div>
-<span class="old-price">₹1999</span>
-<span class="new-price">100ML - ₹999</span>
-</div>
-
-</div>
-
-<select id="size6">
-
-<option>30ML - ₹349</option>
-<option>50ML - ₹649</option>
-<option>100ML - ₹999</option>
-
-</select>
-
-<button class="add-btn" onclick="addToCart('CR7', document.getElementById('size6').value)">
-Add To Cart
-</button>
-
-</div>
-</div>
-
+<section class="section process" id="process">
+<h2 class="title">The Deg Bhapka Process</h2>
+<p class="subtitle">
+This traditional hydro-distillation method gives authentic Kannauj attars
+their unique soul and richness.
+</p>
+<img src="ChatGPT Image Jun 2, 2026, 02_29_53 PM.png" alt="Traditional Deg Bhapka process">
 </section>
 
-<!-- ================= ABOUT ================= -->
-
-<section class="about">
-
-<img src="ChatGPT Image May 22, 2026, 08_20_51 PM.png">
-
-<div class="about-text">
-
-<h2>Made In Kannauj</h2>
-
-<p>
-Pushpsaar Perfumes brings the heritage of Kannauj — the perfume capital of India — into modern luxury fragrances.
+<section class="section" id="products">
+<h2 class="title">Signature Collection</h2>
+<p class="subtitle">
+Authentic Indian attars from the Pushpsaar brochure. Choose 3ml or 6ml before adding to cart.
 </p>
-
-<br>
-
-<p>
-Inspired by traditional attar craftsmanship and blended for premium masculine performance and long-lasting aroma.
-</p>
-
-</div>
-
+<div class="products" id="productGrid"></div>
 </section>
 
-<!-- ================= REVIEWS ================= -->
+<button class="cart-toggle" onclick="toggleCart()">Cart <span id="cartCount">0</span></button>
 
-<section class="review-section">
-
-<h2 class="section-title">Customer Reviews</h2>
-
-<div class="reviews">
-
-<div class="review">
-<h4>⭐⭐⭐⭐⭐ Aman Verma</h4>
-<p>
-Packaging was premium and fragrance lasted all day. Crazy quality honestly.
-</p>
+<div class="cart-sidebar" id="cartSidebar">
+<div class="cart-header">
+<h2>Your Cart</h2>
+<button class="close-cart" onclick="toggleCart()">x</button>
 </div>
-
-<div class="review">
-<h4>⭐⭐⭐⭐⭐ Danish Khan</h4>
-<p>
-Creed Aventus and Dior Sauvage are absolutely insane.
-</p>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-footer">
+<div class="total">Total ₹<span id="total">0</span></div>
+<button class="buy-btn" onclick="checkout()">Buy Now On WhatsApp</button>
 </div>
-
-<div class="review">
-<h4>⭐⭐⭐⭐⭐ Rohit Sharma</h4>
-<p>
-Fast delivery and premium smell. Definitely ordering again.
-</p>
 </div>
-
-</div>
-
-</section>
-
-<!-- ================= CART ================= -->
-
-<div class="cart">
-
-<h2>🛒 Cart</h2>
-
-<div id="cart-items"></div>
-
-<button class="order-btn" onclick="orderNow()">
-Order On WhatsApp
-</button>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
-
-<h2>PUSHPSAAR PERFUMES</h2>
-
-<p>Luxury Kannauj Inspired Fragrances</p>
-
-<p>🚚 Free Delivery All Over India</p>
-
-<p>📞 WhatsApp Orders: +91 6386235558</p>
-
-<div class="instagram">
-
-<a href="https://instagram.com/pushpsaar.perfumes" target="_blank">
-📸
-</a>
-
-</div>
-
+<h2>Pushpsaar Perfumes</h2>
+<p>Authentic Indian Attars | Crafted In Kannauj</p>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
-
 <script>
+const products = [
+{
+id:'shamama',
+name:'Shamama Attar',
+image:'2b0b1442-0d5d-4716-8f85-14a47eb2e480.jpg',
+note:'Traditional oriental blend with rich, spicy complexity.',
+prices:{'3ml':449,'6ml':749}
+},
+{
+id:'sandalwood',
+name:'Sandalwood Attar',
+image:'1e5bdc06-324e-4537-b26b-8029377f6548.jpg',
+note:'Creamy, warm and spiritually uplifting Indian sandalwood.',
+prices:{'3ml':349,'6ml':749}
+},
+{
+id:'lotus',
+name:'Lotus Attar',
+image:'2b0b1442-0d5d-4716-8f85-14a47eb2e480.jpg',
+note:'Fresh aquatic floral notes inspired by pure lotus blooms.',
+prices:{'3ml':349,'6ml':749}
+},
+{
+id:'rose',
+name:'Rose Attar',
+image:'0ca5ddf8-1d61-421b-a0ad-26d4996b3cca.jpg',
+note:'Soft floral luxury inspired by fresh Indian roses.',
+prices:{'3ml':299,'6ml':699}
+},
+{
+id:'mogra',
+name:'Mogra Attar',
+image:'e2f70773-ef77-46eb-88c0-4d93edf85481.jpg',
+note:'Sweet jasmine aroma with elegant freshness.',
+prices:{'3ml':299,'6ml':749}
+},
+{
+id:'khus',
+name:'Khus Attar',
+image:'cd0d4586-cd67-4947-9a13-c436317849d4.jpg',
+note:'Cool earthy scent perfect for summer elegance.',
+prices:{'3ml':399,'6ml':749}
+},
+{
+id:'mitti',
+name:'Mitti Attar',
+image:'2a90aa62-de83-46d5-a132-e9cf02c7dbb1.jpg',
+note:'The nostalgic aroma of rain touching dry earth.',
+prices:{'3ml':399,'6ml':699}
+}
+];
 
-let cart=[];
+let cart = [];
 
-function addToCart(name,size){
-
-cart.push(`${name} - ${size}`);
-
-displayCart();
-
+function formatPrice(value){
+return '₹' + value;
 }
 
-function displayCart(){
+function renderProducts(){
+const grid = document.getElementById('productGrid');
+grid.innerHTML = products.map(product => {
+const defaultSize = '3ml';
+return `
+<div class="card">
+<img src="${product.image}" alt="${product.name}">
+<div class="card-content">
+<h3>${product.name}</h3>
+<p class="product-note">${product.note}</p>
+<div class="size-options" onchange="updateProductPrice('${product.id}')">
+${Object.entries(product.prices).map(([size, price]) => `
+<label>
+<input type="radio" name="size-${product.id}" value="${size}" ${size === defaultSize ? 'checked' : ''}>
+<span>${size}</span>
+<strong>${formatPrice(price)}</strong>
+</label>
+`).join('')}
+</div>
+<div class="price" id="price-${product.id}">${formatPrice(product.prices[defaultSize])}</div>
+<button class="add-btn" onclick="addSelectedToCart('${product.id}')">Add To Cart</button>
+</div>
+</div>`;
+}).join('');
+}
 
-let cartItems=document.getElementById('cart-items');
+function selectedSize(productId){
+return document.querySelector(`input[name="size-${productId}"]:checked`).value;
+}
 
-cartItems.innerHTML='';
+function updateProductPrice(productId){
+const product = products.find(item => item.id === productId);
+const size = selectedSize(productId);
+document.getElementById(`price-${productId}`).innerText = formatPrice(product.prices[size]);
+}
 
-cart.forEach(item=>{
+function toggleCart(){
+document.getElementById('cartSidebar').classList.toggle('active');
+}
 
-cartItems.innerHTML += `
-<div class="cart-item">${item}</div>
-`;
+function addSelectedToCart(productId){
+const product = products.find(item => item.id === productId);
+const size = selectedSize(productId);
+const price = product.prices[size];
+addToCart(product.name, size, price);
+}
 
+function addToCart(name, size, price){
+const item = cart.find(product => product.name === name && product.size === size);
+
+if(item){
+item.qty++;
+}else{
+cart.push({name, size, price, qty:1});
+}
+
+renderCart();
+document.getElementById('cartSidebar').classList.add('active');
+}
+
+function renderCart(){
+let html = '';
+let total = 0;
+let count = 0;
+
+cart.forEach((item,index) => {
+total += item.price * item.qty;
+count += item.qty;
+
+html += `
+<div class="cart-item">
+<strong>${item.name}</strong>
+<small>${item.size} | ${formatPrice(item.price)} x ${item.qty}</small>
+<button class="qty-btn" onclick="increase(${index})">+</button>
+<button class="qty-btn" onclick="decrease(${index})">-</button>
+</div>`;
 });
 
+document.getElementById('cartItems').innerHTML = html || '<p>Your cart is empty.</p>';
+document.getElementById('total').innerText = total;
+document.getElementById('cartCount').innerText = count;
 }
 
-function orderNow(){
+function increase(index){
+cart[index].qty++;
+renderCart();
+}
 
-if(cart.length===0){
+function decrease(index){
+cart[index].qty--;
 
-alert("Your cart is empty!");
+if(cart[index].qty <= 0){
+cart.splice(index,1);
+}
 
+renderCart();
+}
+
+function checkout(){
+if(cart.length === 0){
+alert('Cart is empty');
 return;
-
 }
 
-let message="Hello Pushpsaar Perfumes! I want to order:%0A%0A";
+let message = 'Pushpsaar Perfumes Order%0A%0A';
+let total = 0;
 
-cart.forEach(item=>{
-
-message += "• " + item + "%0A";
-
+cart.forEach(item => {
+message += `${item.name} (${item.size}) x ${item.qty} - ₹${item.price * item.qty}%0A`;
+total += item.price * item.qty;
 });
+
+message += `%0ATotal: ₹${total}`;
 
 window.open(`https://wa.me/916386235558?text=${message}`,'_blank');
-
 }
 
+renderProducts();
+renderCart();
 </script>
-
 </body>
 </html>
